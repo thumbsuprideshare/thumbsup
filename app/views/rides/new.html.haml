@@ -1,9 +1,9 @@
 .search
   %h3
     %form
-      .form-group
-        = label_tag :starting_point, "Starting Point"
-        = text_area_tag :starting_point, nil, class: "form-control"
+        .form-group
+          = label_tag :starting_point, "Starting Point"
+          = text_area_tag :starting_point, nil, class: "form-control"
 
         .form-group
           = label_tag :destination, "Destination"
@@ -12,6 +12,7 @@
         .form-group
           = label_tag :date_time, "Date"
           = text_field_tag :date, nil, class: "datepicker form-control"
+
         :javascript
           $(document).ready(function(){
             $('.datepicker').datepicker();

@@ -14,8 +14,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    %div{:style => "background-color:lightgrey;border-radius:25px"}
-      %div{:class => "col-5"}
+    %div{:style => "background-color:lightgrey;border-radius:25px;text-align: right; font-size: 20px;"}
+      %div{:class => "col-12"}
         - if user_signed_in?
           = link_to "Sign Out", destroy_user_session_path, method: :delete
         - else
@@ -28,5 +28,6 @@
 
     = yield
 
-  %footer
-    created at slohacks 2019
+    %footer
+      .foot
+        created at slohacks 2019
