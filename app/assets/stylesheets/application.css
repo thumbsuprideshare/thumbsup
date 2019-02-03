@@ -53,15 +53,16 @@ footer {
   bottom: 0;
 }
 
+.table {
+  background-color: #E6E3E2;
+}
 .search {
   background-color: #E6E3E2;
   border-radius: 20px;
   padding: 20px;
   display: block;
   width: 50%;
-
 }
-
 
 .block {
   background-color: white;

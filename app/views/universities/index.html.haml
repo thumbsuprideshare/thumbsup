@@ -1,0 +1,14 @@
+%h1 Universities
+
+%table.table.table-hover.table-sm.table-bordered
+  %thead
+    %tr
+      %th{:scope => "col"} Name
+      %th{:scope => "col"} Active Rides
+      %th{:scope => "col"} Number Of Students
+  %tbody
+    - universities.each do |uni|
+      %tr
+        %th{:scope => "row"}= link_to uni.name, university_path(uni)
+        %td= uni.rides.count
+        %td= uni.students.count

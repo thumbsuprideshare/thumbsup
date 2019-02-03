@@ -1,0 +1,16 @@
+%h1= university.name
+
+%table.table.table-hover.table-sm.table-bordered
+  %thead
+    %tr
+      %th{:scope => "col"} Driver Name
+      %th{:scope => "col"} To Location
+      %th{:scope => "col"} From Location
+      %th{:scope => "col"} Seats
+  %tbody
+    - university.rides.each do |ride|
+      %tr
+        %th{:scope => "row"}= ride.driver.first_name
+        %td= ride.to_location.pretty_address
+        %td= ride.from_location.pretty_address
+        %td= ride.seats
