@@ -14,13 +14,12 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-
-    .userManage
-      - if user_signed_in?
-        = link_to "Sign Out", destroy_user_session_path, method: :delete
-      - else
-        = link_to "Sign In", new_user_session_path
-
+    %div{:style => "background-color:lightgrey;border-radius:25px"}
+      %div{:class => "col-5"}
+        - if user_signed_in?
+          = link_to "Sign Out", destroy_user_session_path, method: :delete
+        - else
+          = link_to "Sign In", new_user_session_path
     %header
       %h1
         = image_tag("thumbsUpbigT.png")
@@ -29,5 +28,5 @@
 
     = yield
 
-    %footer
-      created at slohacks 2019
+  %footer
+    created at slohacks 2019
