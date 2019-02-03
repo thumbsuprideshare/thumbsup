@@ -6,25 +6,28 @@
         = text_area_tag :starting_point, nil, class: "form-control"
 
         .form-group
-        = label_tag :destination, "Destination"
-        = text_area_tag :destination, nil, class: "form-control"
+          = label_tag :destination, "Destination"
+          = text_area_tag :destination, nil, class: "form-control"
 
         .form-group
-        = label_tag :date_time, "Date"
-        = text_field_tag :date, nil, class: "datepicker form-control"
+          = label_tag :date_time, "Date"
+          = text_field_tag :date, nil, class: "datepicker form-control"
         :javascript
           $(document).ready(function(){
             $('.datepicker').datepicker();
             });
 
         .form-group
-        = label_tag :role, "Driver or Rider?"
-        = radio_button :role; :driver, "Driver"
-        = radio_button :role; :rider, "Rider"
+          = label_tag :role, "Driver or Rider?"
+          = radio_button_tag :role, "driver"
+          = label_tag :role_driver, "Driver"
+          = radio_button_tag :role, "rider"
+          = label_tag :role_rider, "Rider"
 
         .form-group
-        %button#submitB.block{:type => "button"} Submit
+          %button#submitB.block{:type => "button"} Submit
+
         :javascript
           document.getElementById("submitB").onclick = function () {
-            location.href = "seekOrOffer.html.haml";
+            //location.href = "seekOrOffer.html.haml";
             };

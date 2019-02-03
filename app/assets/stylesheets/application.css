@@ -47,6 +47,11 @@ header img {
   height: 70px;
 }
 
+.userManage {
+  float: right;
+  text-decoration: none;
+}
+
 footer {
   clear: both;
   position: absolute;
