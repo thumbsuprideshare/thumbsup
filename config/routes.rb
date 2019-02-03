@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  
+  resources :rides, only: [:new]
   root to: 'home#index'
 end
