@@ -1,16 +1,28 @@
-%h1
-  thumbsUp
-  %small modern rideshare for students
 
-%h3 Select Your School
+%header
+  %h1
+    = image_tag("thumbsUpbigT.png")
+    %br
+    %small modern rideshare for students
 
-.fancy-text
-  I made a web page!
+.search
+  %h3
+    %form
+      .form-group
+        = label_tag :starting_point, "Starting Point"
+        = text_area_tag :starting_point, nil, class: "form-control"
 
-.dropdown
-  %button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
-    Dropdown button
-  .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
-    %a.dropdown-item{:href => "#"} Action
-    %a.dropdown-item{:href => "#"} Another action
-    %a.dropdown-item{:href => "#"} Something else here
+        .form-group
+        = label_tag :destination, "Destination"
+        = text_area_tag :destination, nil, class: "form-control"
+
+        .form-group
+        = label_tag :date_time, "Date"
+        = text_field_tag :date, nil, class: "datepicker form-control"
+        :javascript
+          $(document).ready(function(){
+            $('.datepicker').datepicker();
+            });
+
+%footer
+  created at slohacks 2019

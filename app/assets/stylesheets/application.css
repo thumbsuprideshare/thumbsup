@@ -12,12 +12,51 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker
  */
 
 h1 {
-  color: #f2f2f2;
+  color: black;
 }
 
-.fancy-text {
-  font-family: cursive;
+h3 {
+  color: #1b4f93;
+}
+
+body {
+
+  display: block;
+  margin: 15px;
+  background-image: url("Mapp.png");
+  background-attachment: fixed;
+  background-repeat: round;
+
+}
+
+header {
+  background-color: #E6E3E2;
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header img {
+  height: 70px;
+}
+
+footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+}
+
+.search {
+  background-color: #E6E3E2;
+  border-radius: 20px;
+  padding: 20px;
+  display: block;
+  width: 50%;
+
+
 }
