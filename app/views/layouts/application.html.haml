@@ -13,4 +13,13 @@
     = javascript_include_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+      %h1
+        = image_tag("thumbsUpbigT.png")
+        %br
+        %small modern rideshare for students
+    - if user_signed_in?
+      = link_to "Sign Out", destroy_user_session_path, method: :delete
+    - else
+      = link_to "Sign In", new_user_session_path
     = yield
