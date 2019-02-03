@@ -20,11 +20,13 @@ h1 {
 }
 
 h3 {
-  color: #1b4f93;
+
 }
 
 body {
 
+  color: black;
+  font-family: Helvetica;
   display: block;
   margin: 15px;
   background-image: url("Mapp.png");
@@ -58,5 +60,10 @@ footer {
   display: block;
   width: 50%;
 
+}
 
+
+.block {
+  background-color: white;
+  font-family: Helvetica;
 }

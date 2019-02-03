@@ -17,5 +17,9 @@
             $('.datepicker').datepicker();
             });
 
-%footer
-  created at slohacks 2019
+        .form-group
+        %button#submitB.block{:type => "button"} Submit
+        :javascript
+          document.getElementById("submitB").onclick = function () {
+            location.href = "seekOrOffer.html.haml";
+            };
